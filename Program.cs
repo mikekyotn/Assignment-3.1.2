@@ -34,13 +34,14 @@
         static bool IfYearIsLeap(int yearEntered)
         {
             //Leaps years are divisible by 4, except years div by 100; unless also div by 400 
-            bool isLeapYear = false;
             if ((yearEntered % 4 == 0) && (yearEntered % 100 != 0) || (yearEntered % 400 == 0))
             {
-                isLeapYear = true;
+                return true;
             }
-        
-            return isLeapYear;
+            else
+            {
+                return false;
+            }
         }
 
         static int GetYear()
